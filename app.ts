@@ -13,8 +13,6 @@ let combineValues: (a: number, b: number) => number;
 
 combineValues = add;
 
-combineValues = printResult; // notice this assignment throws error
-
 console.log(combineValues(8, 8));
 
 function addAndHandle(n1: number, n2: number, cb: (a: number) => void) { 
