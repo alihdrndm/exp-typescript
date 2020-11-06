@@ -1,13 +1,13 @@
-function combine(input10: number | string, input20: number | string) {
+function combine(input1: number | string, input2: number | string, convertResult: string) {
     let result;
-   if (typeof input10 === 'number' && typeof input20 === 'number') {
-       result = input10 + input20;
+   if (typeof input1 === 'number' && typeof input2 === 'number' || convertResult === 'to-number') {
+       result = +input1 + +input2;
    }else {
-       result = input10.toString() + input20.toString();
+       result = input1.toString() + input2.toString();
    } 
     return result; 
 }
 
-console.log(combine(30, 34));
+console.log(combine(31, 34, 'to-number'));
 
-console.log(combine('Ali', 'Haider'));
+console.log(combine('Ali', 'Haider', 'to-text'));
