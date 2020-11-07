@@ -1,11 +1,11 @@
 function combine(input10: number | string, input20: number | string) {
-    let ourResult;
+    let result;
    if (typeof input10 === 'number' && typeof input20 === 'number') {
-       ourResult = input10 + input20;
+       result = input10 + input20;
    }else {
-       ourResult = input10.toString() + input20.toString();
+       result = input10.toString() + input20.toString();
    } 
-    return ourResult; 
+    return result; 
 }
 
 console.log(combine(30, 34));
