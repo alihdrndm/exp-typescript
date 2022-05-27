@@ -1,9 +1,9 @@
-function combine(input1: number | string, input2: number | string) {
+function combine(input10: number | string, input20: number | string) {
     let result;
-   if (typeof input1 === 'number' && typeof input2 === 'number') {
-       result = input1 + input2;
+   if (typeof input10 === 'number' && typeof input20 === 'number') {
+       result = input10 + input20;
    }else {
-       result = input1.toString() + input2.toString();
+       result = input10.toString() + input20.toString();
    } 
     return result; 
 }
