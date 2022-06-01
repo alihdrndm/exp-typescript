@@ -1,16 +1,18 @@
-type Combinable = number | string;
-type ConversionDescriptor = 'to-number' | 'to-text'
-
-function combine(input1: Combinable, input2: Combinable, convertResult: ConversionDescriptor) {
-    let result;
-   if (typeof input1 === 'number' && typeof input2 === 'number' || convertResult === 'to-number') {
-       result = +input1 + +input2;
-   }else {
-       result = input1.toString() + input2.toString();
-   } 
-    return result; 
+// our function with 2 parameters
+function add(n1: number, n2: number): number {
+    return n1 + n2; 
 }
 
-console.log(combine(40, 34, 'to-number'));
+// our function with only 1 parameter
+function printResult(num: number)  {
+    console.log('Resulted', + num);
+}
 
-console.log(combine('Ali', 'Haider', 'to-text'));
+// declaring a variable and giving it a type of Function
+let combineValues: (a: number, b: number) => number;
+
+combineValues = add;
+
+combineValues = printResult; // notice this assignment throws error
+
+console.log(combineValues(8, 8));
