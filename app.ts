@@ -1,21 +1,13 @@
-const person: {
-    name: string;
-    age: number;
-    hobbies: (string | number | string | boolean | {isImage: boolean; imageSize: string;})[];
-    role: [number, string]
-} = {
-    // const person = {
-    name: 'Ali Haider Nadeem',
-    age: 27,
-    hobbies: ['sports', 1, 'cooking', true, {isImage: true, imageSize: '500px'}],
-    role: [2, 'administrator']
+function combine(input1: number | string, input2: number | string) {
+    let result;
+   if (typeof input1 === 'number' && typeof input2 === 'number') {
+       result = input1 + input2;
+   }else {
+       result = input1.toString() + input2.toString();
+   } 
+    return result; 
 }
 
-console.log(person.role);
+console.log(combine(30, 34));
 
-for (let hobby of person.hobbies) {
-    // console.log(hobby);
-    if (typeof hobby === 'object') {
-        console.log(hobby.imageSize);
-    }
-}
+console.log(combine('Ali', 'Haider'));
